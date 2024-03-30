@@ -1,0 +1,51 @@
+{
+  jillhopkins123@gmail.com: {
+    password: "$2a$12$ztNp6LtGeG3IsE6K.4bI/O/Yx2c4/5TATEHI5cyKlpLQ/ZaCu1wwG", 
+    first_name: "Jill", 
+    last_name: "Hopkins",
+    phone_number: "212-455-6107",
+    pets: {
+      Joey: {
+        birthday: "03/25/24",
+        type: "Canine",
+        breed: "Pitbull", 
+        weight: "20lbs 4oz",
+        microchip_number: "0912921389128312"
+      }
+    }
+  }, 
+
+  jazzyjazz123@yahoo.com: {
+    password: "$2a$12$E8eWSLNvcEeaMvBwmg0z6Oo4WnGNoNm0KmVFhn.tbK./r7nGyseja", 
+    first_name: "Jazz", 
+    last_name: "Whitfield",
+    phone_number: "864-347-5824",
+    pets: {
+      Kora: {
+        birthday: "12/01/22",
+        type: "Feline",
+        breed: "DSH", 
+        weight: "8lbs 2oz",
+        microchip_number: "31039128309274492"
+      }
+    }
+  }, 
+
+  jayisthegreatest@aol.com: {
+    password: "$2a$12$TcMXNU/Xs7iF6p44Kbiu..pSjI1DRdg2jaQQURET9uoyInYNgtsnO", 
+    first_name: "Jay", 
+    last_name: "Lujan",
+    phone_number: "917-093-2323",
+    pets: {
+      Dune: {
+        birthday: "11/03/14",
+        type: "Snake",
+        breed: "Ball Python", 
+        weight: "15lbs 0oz",
+        microchip_number: "128928392837910231"
+      }
+    }
+  }
+
+}
+

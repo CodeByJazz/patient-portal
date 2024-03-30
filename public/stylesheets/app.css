@@ -1,0 +1,17 @@
+body {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.message {
+  padding: 10px;
+  background-color: bisque;
+}
+
+form.inline {
+  display: inline;
+}
+
+.user-status {
+  font-style: italic;
+}

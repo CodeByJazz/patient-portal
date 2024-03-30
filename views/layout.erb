@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Patient Portal</title>
+    <meta charset="UTF=8">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+    <% if session[:message] %>
+      <p class="message"><%= session.delete(:message)%></p>
+    <% end %>
+    </header> 
+
+    <main>
+      <%== yield %>
+    </main>
+  </body>
+</html>

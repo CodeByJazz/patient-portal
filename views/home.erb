@@ -1,0 +1,19 @@
+<a href="/add_pet">Add New Pet</a>
+<ul>
+  <% @users[session[:username]]["pets"].each_key do |pet| %>
+  <li>
+    <a href="/<%= pet %>/dashboard"><%= pet %></a>
+    <a href="/<%= pet %>/edit">Edit</a>
+    <form class="inline" action="/<%= pet %>/delete" method="post">
+      <button type="submit">Delete</button>
+    </form>
+  </li>
+  <% end %>
+</ul>
+
+<form action="/users/signout" method="post">
+  <p class="user-status">
+    Signed in as, <%=@users[session[:username]]["first_name"]%>
+    <button type="submit">Sign Out</button>
+  </p>
+</form>

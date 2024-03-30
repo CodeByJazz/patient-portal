@@ -1,0 +1,15 @@
+<form action="/users/signin" method="post">
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="username" value=<%= @username %>>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password">  
+  </div> 
+
+  <button type="submit">Sign In</button> 
+</form>
+
+<a href="/create_account">Create New Account</a>   
