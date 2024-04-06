@@ -24,6 +24,11 @@ helpers do
       Date.parse(visit)
     end.reverse
   end
+
+  def format(date)
+    parsed = date.split("-")
+    new_date = "#{parsed[1]}/#{parsed[0]}/#{parsed[2]}"
+  end
 end
 
 def data_path 
@@ -254,10 +259,18 @@ get "/:pet_name/visit_history" do
   @name = params[:pet_name]
   directory_path = File.join(data_path, "#{@name}/visits/*")
   @visits = Dir.glob(directory_path).map do |path|
-    File.basename(path.gsub("_","-"))
+    File.basename(path.gsub("_","-")).gsub(".md", "")
   end
 
   erb :visit_history
+end
+
+get "/:name/:date/visit_summary" do 
+  name = params[:name]
+  date = params[:date]
+  file_path = File.join(data_path, "#{name}/visits/#{date}.md")
+  content = File.read(file_path)
+  erb render_markdown(content)
 end
 
 

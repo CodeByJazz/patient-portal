@@ -1,4 +1,11 @@
 <% content_for :header_title do %>
   <h2>Visit History</h2>
 <% end %>
-<%= sort_by_date(@visits) %>
+<ul>
+  <% sort_by_date(@visits).each do |date| %>
+  <li>
+    <a href="/<%= @name %>/<%= date.gsub("-", "_") %>/visit_summary"><%= format(date) %></a>
+  </li>
+  <% end %>
+</ul>
+
