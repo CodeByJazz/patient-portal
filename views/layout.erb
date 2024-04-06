@@ -8,6 +8,7 @@
   </head>
   <body>
     <header>
+    <%== yield_content :header_title %>
     <% if session[:message] %>
       <p class="message"><%= session.delete(:message)%></p>
     <% end %>

@@ -1,0 +1,128 @@
+<% content_for :header_title do %>
+  <h2>Patient Information</h2>
+<% end %>
+
+<form class="information" action="/add_pet" method="post">
+<div>
+  <label for="name">Name:</label>
+    <input id="name" type="text" name="name" value=<%= @name %>>
+</div>
+<div>
+  <label for="birthday">Birthday:</label>
+    <input id="birthday" type="date" name="birthday">
+</div>
+<div>
+  <label for="type">Type:</label>
+  <select id="type" name="type">
+    <option value="">--Select an option--</option>
+    <option value="Unknown">Unknown</option>
+    <option value="Canine">Canine</option>
+    <option value="Feline">Feline</option>
+    <option value="Bird">Bird</option>
+    <option value="Rabbit">Rabbit</option>
+    <option value="Fish">Fish</option>
+    <option value="Hamster">Hamster</option>
+    <option value="Guinea Pig">Guinea Pig</option>
+    <option value="Snake">Snake</option>
+    <option value="Turtle">Turtle</option>
+    <option value="Ferret">Ferret</option>
+    <option value="Hedgehog">Hedgehog</option>
+    <option value="Lizard">Lizard</option>
+    <option value="Rat">Rat</option>
+    <option value="Gerbil">Gerbil</option>
+    <option value="Spider">Spider</option>
+  </select>
+</div>
+<div>
+  <label for="breed">Breed:</label>
+  <select id="breed" name="breed">
+    <option value="">--Select an option--</option>
+    <option value="Unknown">Unknown</option>
+    <option value="Golden Retriever">Golden Retriever</option>
+    <option value="German Shepherd">German Shepherd</option>
+    <option value="Poodle">Poodle</option>
+    <option value="Bulldog">Bulldog</option>
+    <option value="Akita">Akita</option>
+    <option value="Husky">Husky</option>
+    <option value="Siamese">Siamese</option>
+    <option value="Persian">Persian</option>
+    <option value="Maine Coon">Maine Coon</option>
+    <option value="Bengal">Bengal</option>
+    <option value="Scottish Fold">Scottish Fold</option>
+    <option value="Parakeet">Parakeet</option>
+    <option value="Cockatiel">Cockatiel</option>
+    <option value="Canary">Canary</option>
+    <option value="Lovebird">Lovebird</option>
+    <option value="Pigeon">Pigeon</option>
+    <option value="Holland Lop">Holland Lop</option>
+    <option value="Mini Rex">Mini Rex</option>
+    <option value="Lionhead">Lionhead</option>
+    <option value="Flemish Giant">Flemish Giant</option>
+    <option value="Netherland Dwarf">Netherland Dwarf</option>
+    <option value="Goldfish">Goldfish</option>
+    <option value="Betta Fish">Betta Fish</option>
+    <option value="Neon Tetra">Neon Tetra</option>
+    <option value="Angelfish">Angelfish</option>
+    <option value="Guppy">Guppy</option>
+    <option value="Syrian Hamster">Syrian Hamster</option>
+    <option value="Dwarf Hamster">Dwarf Hamster</option>
+    <option value="Roborovski Hamster">Roborovski Hamster</option>
+    <option value="Chinese Hamster">Chinese Hamster</option>
+    <option value="Campbell's Dwarf Hamster">Campbell's Dwarf Hamster</option>
+    <option value="American Guinea Pig">American Guinea Pig</option>
+    <option value="Abyssinian Guinea Pig">Abyssinian Guinea Pig</option>
+    <option value="Peruvian Guinea Pig">Peruvian Guinea Pig</option>
+    <option value="Skinny Pig">Skinny Pig</option>
+    <option value="Texel Guinea Pig">Texel Guinea Pig</option>
+    <option value="Ball Python">Ball Python</option>
+    <option value="Corn Snake">Corn Snake</option>
+    <option value="Boa Constrictor">Boa Constrictor</option>
+    <option value="King Snake">King Snake</option>
+    <option value="Garter Snake">Garter Snake</option>
+    <option value="Red-Eared Slider">Red-Eared Slider</option>
+    <option value="Eastern Box Turtle">Eastern Box Turtle</option>
+    <option value="Painted Turtle">Painted Turtle</option>
+    <option value="Russian Tortoise">Russian Tortoise</option>
+    <option value="Sulcata Tortoise">Sulcata Tortoise</option>
+    <option value="Albino Ferret">Albino Ferret</option>
+    <option value="Sable Ferret">Sable Ferret</option>
+    <option value="Black-Footed Ferret">Black-Footed Ferret</option>
+    <option value="Angora Ferret">Angora Ferret</option>
+    <option value="Cinnamon Ferret">Cinnamon Ferret</option>
+    <option value="African Pygmy Hedgehog">African Pygmy Hedgehog</option>
+    <option value="Algerian Hedgehog">Algerian Hedgehog</option>
+    <option value="Egyptian Long-Eared Hedgehog">Egyptian Long-Eared Hedgehog</option>
+    <option value="European Hedgehog">European Hedgehog</option>
+    <option value="Northern White-Breasted Hedgehog">Northern White-Breasted Hedgehog</option>
+    <option value="Leopard Gecko">Leopard Gecko</option>
+    <option value="Bearded Dragon">Bearded Dragon</option>
+    <option value="Crested Gecko">Crested Gecko</option>
+    <option value="Blue Tongue Skink">Blue Tongue Skink</option>
+    <option value="Chameleon">Chameleon</option>
+    <option value="Fancy Rat">Fancy Rat</option>
+    <option value="Dumbo Rat">Dumbo Rat</option>
+    <option value="Hairless Rat">Hairless Rat</option>
+    <option value="Black Rat">Black Rat</option>
+    <option value="Hooded Rat">Hooded Rat</option>
+    <option value="Mongolian Gerbil">Mongolian Gerbil</option>
+    <option value="Fat-Tailed Gerbil">Fat-Tailed Gerbil</option>
+    <option value="Indian Gerbil">Indian Gerbil</option>
+    <option value="Pallid Gerbil">Pallid Gerbil</option>
+    <option value="Bushy-Tailed Jird">Bushy-Tailed Jird</option>
+    <option value="Mexican Red Knee">Mexican Red Knee</option>
+    <option value="Chilean Rose">Chilean Rose</option>
+    <option value="Brazilian Salmon Pink Bird-Eater">Brazilian Salmon Pink Bird-Eater</option>
+    <option value="Mexican Red Leg">Mexican Red Leg</option>
+    <option value="Costa Rican Zebra">Costa Rican Zebra</option>
+  </select>
+</div>
+<div>
+  <label for="weight">Weight(lbs):</label>
+    <input id="weight" type="text" name="weight">
+</div>
+<div>
+  <label for="microchip">Microchip #:</label>
+    <input id="microchip" type="text" name="microchip" value=<%= @microchip %>>
+</div>
+<button type="submit">Add Pet</button>
+</form>

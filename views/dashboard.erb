@@ -1,0 +1,40 @@
+<% content_for :header_title do %>
+  <h2><%= @name.capitalize %>'s Dashboard</h2>
+<% end %>
+<table>
+  <tr>
+    <th>Name:</th>
+    <td><%= @name.upcase %></td>
+  </tr>
+  <tr>
+    <th>Birhday:</th>
+    <td><%= @info["birthday"] %></td>
+  </tr>
+  <tr>
+    <th>Type:</th>
+    <td><%= @info["type"] %></td>
+  </tr>
+  <tr>
+    <th>Breed:</th>
+    <td><%= @info["breed"] %></td>
+  </tr>
+  <tr>
+    <th>Age:</th>
+    <td><%= @age %> years old</td>
+  </tr>
+  <tr>
+    <th>Weight:</th>
+    <td><%= @info["weight"] %> lbs</td>
+  </tr>
+  <tr>
+    <th>Microchip #:</th>
+    <td><%= @info["microchip"] %></td>
+  </tr>
+</table>
+<div>
+<a href="/<%=@name%>/visit_history">Visit History</a>
+</div>
+<div>
+<a href="/<%=@name%>/vaccine_tracker">Vaccine Tracker</a>
+</div>
+<a href="/<%=@name%>/prescriptions">RX Prescriptions</a>
