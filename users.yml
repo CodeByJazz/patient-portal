@@ -35,3 +35,66 @@ jayisthegreatest@aol.com:
       breed: Akita
       weight: '76'
       microchip: '666'
+      vaccines: 
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies: 
+          due: "01-16-2025"
+          performed: "01-16-2022"
+        DA2P:
+          due: "01-16-2025"
+          performed: "01-16-2022"
+        Lepto:
+          due: "03-12-2025"
+          performed: "03-12-2024"
+        Lyme:
+          due: "03-12-2025"
+          performed: "03-12-2024"
+        Influenza:
+          due: "01-16-2023"
+          performed: "01-16-2022"
+        Bordetella:
+          due: "03-12-2025"
+          performed: "03-12-2024"
+        Parvovirus:
+          due: "01-16-2023"
+          performed: "01-16-2022"
+    sammy:
+      birthday: '2020-05-04'
+      type: Bird
+      breed: Pigeon
+      weight: '4'
+      microchip: ''
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}

@@ -1,0 +1,22 @@
+<% content_for :header_title do%>
+  <h2>Vaccine Tracker</h2>
+<% end %>
+
+<table>
+ <thead>
+   <tr>
+     <th>Name: </th>
+     <th>Due Date:</th>
+     <th>Performed Date:</th>
+   </tr>
+ </thead>
+  <% @vaccines.each_pair do |name, dates| %>
+
+    <tr>
+      <th><%= name %></th>
+      <td><%= dates["due"] %></td>
+      <td><%= dates["performed"] %></td>
+    </tr>
+  <% end %>
+</table>
+

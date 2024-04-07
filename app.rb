@@ -86,8 +86,6 @@ def create_directory(name)
   @file_path = File.join(data_path, name.downcase)
   FileUtils.mkdir_p(@file_path)
   FileUtils.mkdir_p(File.join(@file_path, "visits")) 
-  FileUtils.touch(File.join(@file_path, "vaccines.yml")) 
-  FileUtils.touch(File.join(@file_path, "prescriptions.yml")) 
 end
 
 def delete_directory(name)
@@ -108,7 +106,47 @@ def add_pet(name, birthday, type, breed, weight, microchip)
     "type" => type,
     "breed" => breed,
     "weight" => weight,
-    "microchip" => microchip
+    "microchip" => microchip,
+    "vaccines" => {
+      "FeLV" => {
+        "due" => "",
+        "performed" => ""
+      },
+      "FVRCP" => {
+        "due" => "", 
+        "performed" => ""
+      },
+      "Rabies" => {
+        "due" => "", 
+        "performed" => ""
+      },
+      "DA2P" => {
+        "due" => "", 
+        "performed" => ""
+      },
+      "Lepto" => {
+        "due" => "", 
+        "performed" => ""
+      },
+      "Lyme" => {
+        "due" => "", 
+        "performed" => ""
+      },
+      "Influenza" => {
+        "due" => "", 
+        "performed" => ""
+      },
+      "Bordatella" => {
+        "due" => "", 
+        "performed" => ""
+      },
+      "Parvovirus" => {
+        "due" => "", 
+        "performed" => ""
+      },
+    }, 
+    "prescriptions" => {
+    }
   }
   File.open(credentials_path, 'w') { |f| YAML.dump(@users, f) }
 end
@@ -262,17 +300,26 @@ get "/:pet_name/visit_history" do
     File.basename(path.gsub("_","-")).gsub(".md", "")
   end
 
-  erb :visit_history
+  erb :visits
 end
 
-get "/:name/:date/visit_summary" do 
-  name = params[:name]
+get "/:pet_name/:date/visit_summary" do 
+  name = params[:pet_name]
   date = params[:date]
   file_path = File.join(data_path, "#{name}/visits/#{date}.md")
   content = File.read(file_path)
+
   erb render_markdown(content)
 end
 
+get "/:pet_name/vaccine_tracker" do 
+  name = params[:pet_name]
+
+  @info = @users[session[:username]]["pets"][name.downcase]
+  @vaccines = @info["vaccines"]
+
+  erb :vaccines
+end
 
 
 
