@@ -1,0 +1,18 @@
+<% content_for :header_title do %>
+  <h2>RX Prescriptions</h2>
+<% end %>
+
+<% if @prescriptions.empty? %>
+  <h3>There are no active prescriptions.</h3>
+<% else %>
+  <ul>
+    <% @prescriptions.keys.each do |prescription| %>
+      <li>
+        <a href="/<%= @name %>/<%= prescription%>/prescriptions">
+          <%= prescription.capitalize %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+

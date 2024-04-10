@@ -15,3 +15,10 @@ form.inline {
 .user-status {
   font-style: italic;
 }
+
+img { 
+  width: 150px; /* Adjust the width to your preference */
+  height: 150px; /* Adjust the height to your preference */
+  border-radius: 50%; /* Makes the image round */
+  margin-bottom: 20px; /* Adds spacing below the image */
+}

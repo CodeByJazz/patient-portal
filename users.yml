@@ -23,51 +23,96 @@ jayisthegreatest@aol.com:
   last_name: Lujan
   phone_number: 917-093-2323
   pets:
-    muad'dib:
-      birthday: '2024-04-06'
-      type: Hamster
-      breed: Dwarf Hamster
-      weight: '3'
-      microchip: ''
     cuscus:
       birthday: '2013-04-01'
       type: Canine
       breed: Akita
       weight: '76'
       microchip: '666'
-      vaccines: 
+      vaccines:
         FeLV:
           due: ''
           performed: ''
         FVRCP:
           due: ''
           performed: ''
-        Rabies: 
-          due: "01-16-2025"
-          performed: "01-16-2022"
+        Rabies:
+          due: 01-16-2025
+          performed: 01-16-2022
         DA2P:
-          due: "01-16-2025"
-          performed: "01-16-2022"
+          due: 01-16-2025
+          performed: 01-16-2022
         Lepto:
-          due: "03-12-2025"
-          performed: "03-12-2024"
+          due: 03-12-2025
+          performed: 03-12-2024
         Lyme:
-          due: "03-12-2025"
-          performed: "03-12-2024"
+          due: 03-12-2025
+          performed: 03-12-2024
         Influenza:
-          due: "01-16-2023"
-          performed: "01-16-2022"
+          due: 01-16-2023
+          performed: 01-16-2022
         Bordetella:
-          due: "03-12-2025"
-          performed: "03-12-2024"
+          due: 03-12-2025
+          performed: 03-12-2024
         Parvovirus:
-          due: "01-16-2023"
-          performed: "01-16-2022"
+          due: 01-16-2023
+          performed: 01-16-2022
+      prescriptions:
+        rimadyl:
+          dosage: 10mg
+          refills: 2
+          quantity: 60
+          instructions: Give 1/4 of a tablet twice a day with food.
+        prozac:
+          dosage: 5mg
+          refills: 3
+          quantity: 30
+          instructions: Give 1 pill once a day with food.
+        apoquel:
+          dosage: 16mg
+          refills: 0
+          quantity: 90
+          instructions: Give 1 pill once a day with food.
     sammy:
       birthday: '2020-05-04'
       type: Bird
       breed: Pigeon
       weight: '4'
+      microchip: ''
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}
+    muad'dib:
+      birthday: '2024-04-09'
+      type: Hamster
+      breed: Dwarf Hamster
+      weight: ".12"
       microchip: ''
       vaccines:
         FeLV:

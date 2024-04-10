@@ -145,8 +145,7 @@ def add_pet(name, birthday, type, breed, weight, microchip)
         "performed" => ""
       },
     }, 
-    "prescriptions" => {
-    }
+    "prescriptions" => {}
   }
   File.open(credentials_path, 'w') { |f| YAML.dump(@users, f) }
 end
@@ -199,7 +198,6 @@ end
 
 post "/:pet_name/delete" do 
   pet_name = params[:pet_name]
-
   delete_pet(pet_name)
   
   session[:message] = "#{pet_name.capitalize} has been deleted."
@@ -321,6 +319,31 @@ get "/:pet_name/vaccine_tracker" do
   erb :vaccines
 end
 
+get "/:pet_name/prescriptions" do 
+  @name = params[:pet_name]
+  @info = @users[session[:username]]["pets"][@name.downcase]
+  @prescriptions = @info["prescriptions"]  
+
+  erb :prescriptions
+end
+
+get "/:pet_name/:prescription_name/prescriptions" do 
+  @name = params[:pet_name]
+  @prescription = params[:prescription_name]  
+  @info = @users[session[:username]]["pets"][@name.downcase]
+  @prescription_info = @info["prescriptions"][@prescription]
+
+  erb :prescription_info
+end
+
+post "/:pet_name/:prescription_name/request_refill" do
+  @name = params[:pet_name]
+  @prescription = params[:prescription_name] 
+
+  session[:message] = "Your refill request for #{@prescription.capitalize} has been submitted! Please allow up to 48 hours for approval."
+
+  redirect "/#{@name}/prescriptions"
+end
 
 
 
@@ -667,4 +690,48 @@ Doctors can login and view any relevant information about their clients (owners/
     -Pet info
   -Doctors should be able to add new prescriptions for pets, edit vaccine tracker, and add visit date and notes 
   
+
+  ----TODO LIST---
+  -VISIT HISTORY PAGE
+    -Add a link that says 'Add Visit Summary' to the bottom of the `Visit History` page 
+      -This should redirect the user to a form that asks for the visit `Month, Day, and Year` 
+      -There should also be a text box for the user to input details about the visit 
+      (Only admins are able to add a visit summary)
+      -When the user clicks submit, they should be redirected to the `Visit History` page 
+      -The new visit should appear in the list of visits on the 'Visit History' page 
+      -When the user clicks it, it should load the contents of the rendered .md file created for that visit
+  -VACCINE TRACKER PAGE 
+    -Add a link that says 'Update Vaccines' to the bottom of the `Vaccine Tracker` page 
+      -This should redirect the user to a form that asks for the due date and performed date for each vaccine 
+        -The default values should be what is already associated with the due and performed date for each vaccine
+      -(Only admins are able to update vaccines)
+      -When the user clicks submit, they should be redirected to the `Vaccine Tracker` page 
+      -The dates for the updated vaccines should appear in the table
+  -RX PRESCRIPTIONS PAGE    
+    -Create a get route for the 'RX prescriptions' page 
+    -It should display a list of each Prescription associated with that pet
+    -Each prescription should be a link
+      -When the user clicks it they should be taken to a page that lists the:
+        -Name of the medication 
+        -Dosage 
+        -Refills Remaining
+        -Quantity 
+        -Instructions
+    -There should be a link at the bottom of the page that says "Add Prescription"
+    -Only admins should be allowed to add prescriptions for a pet 
+    -There should be at the bottom that says request refill 
+    -This should take the user to a page that says "Refill Request Form"
+      -A form should be rendered that contains:
+      -Please select the name of the medication you would like to have refilled:
+        -With a dropdown menu with all of the medications currently prescribed to the pet
+      -Has #{pet_name} experienced any negative side effects with this medication?
+        -Yes or No
+      -A submit button that says "Submit Request"
+    -After they submit the request, they should be redirected to the 'RX Prescriptions' page
+    -A message should pop up that says "Your refill request for #{medication_name} has been submitted! Please allow up to 48 hours for approval. "
+    ---TO BE ADDED--
+     -The name of the medication should be a section that says Pending Refills
+       
+           
+
 =end

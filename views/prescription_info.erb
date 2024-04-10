@@ -1,0 +1,30 @@
+<% content_for :header_title do %>
+  <h2>Prescription Details</h2>
+<% end %>
+<table>
+  <tr>
+    <th>Name:</th>
+    <td><%= @prescription.capitalize %></td>
+  </tr>
+  <tr>
+    <th>Dosage:</th>
+    <td><%= @prescription_info["dosage"] %></td>
+  </tr>
+  <tr>
+    <th>Refills:</th>
+    <td><%= @prescription_info["refills"] %></td>
+  </tr>
+  <tr>
+    <th>Quantity:</th>
+    <td><%= @prescription_info["quantity"] %></td>
+  </tr>
+  <tr>
+    <th>Instructions:</th>
+    <td><%= @prescription_info["instructions"] %></td>
+  </tr>
+</table>
+<div>
+  <form action="/<%= @name %>/<%= @prescription%>/request_refill" method="post">
+    <button>Request Refill</button>
+  </form>
+</div>
