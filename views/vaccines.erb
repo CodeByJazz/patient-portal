@@ -6,8 +6,8 @@
  <thead>
    <tr>
      <th>Name: </th>
-     <th>Due Date:</th>
-     <th>Performed Date:</th>
+     <th>Due:</th>
+     <th>Performed:</th>
    </tr>
  </thead>
   <% @vaccines.each_pair do |name, dates| %>
@@ -20,3 +20,4 @@
   <% end %>
 </table>
 
+<a href="/<%=@name%>/update_vaccines">Update Vaccines</a>

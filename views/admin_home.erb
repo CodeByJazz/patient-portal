@@ -1,0 +1,22 @@
+<% content_for :header_title do %>
+  <h1>Patient Portal</h1>
+<% end %>
+
+<a href="/create_account">Add New Client</a>
+  <ul>
+    <% all_registered_users.each do |user| %>
+      <li>
+        <a href="/">
+        <%=user%>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+
+<form action="/users/signout" method="post">
+  <p class="user-status">
+    Signed in as, <%=@users[session[:username]]["first_name"]%>
+    <button type="submit">Sign Out</button>
+  </p>
+</form>
+

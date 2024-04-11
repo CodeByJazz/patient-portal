@@ -1,7 +1,6 @@
 <% content_for :header_title do %>
   <h1>Patient Portal</h1>
 <% end %>
-
 <a href="/add_pet">Add New Pet</a>
   <ul>
     <% @users[session[:username]]["pets"].each_key do |pet| %>
@@ -14,7 +13,6 @@
     </li>
     <% end %>
   </ul>
-
 <form action="/users/signout" method="post">
   <p class="user-status">
     Signed in as, <%=@users[session[:username]]["first_name"]%>

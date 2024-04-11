@@ -1,22 +1,11 @@
 ---
-jillhopkins123@gmail.com:
-  password: "$2a$12$ztNp6LtGeG3IsE6K.4bI/O/Yx2c4/5TATEHI5cyKlpLQ/ZaCu1wwG"
-  first_name: Jill
-  last_name: Hopkins
-  phone_number: 212-455-6107
-  pets: {}
-jazzyjazz123@yahoo.com:
-  password: "$2a$12$E8eWSLNvcEeaMvBwmg0z6Oo4WnGNoNm0KmVFhn.tbK./r7nGyseja"
-  first_name: Jazz
-  last_name: Whitfield
-  phone_number: 864-347-5824
-  pets:
-    kora:
-      birthday: '2021-02-28'
-      type: Feline
-      breed: Maine Coon
-      weight: '20'
-      microchip: '92847120'
+admin@ppc.com:
+  password: "$2a$12$4NPaTkJSi9RUeBf/2wdv8.NKyNOsf7GW3k.RpOrQLfXywI3HDAMVi"
+  first_name: Administrator
+  refill_requests:
+    cuscus:
+      prozac: 30
+      apoquel: 90
 jayisthegreatest@aol.com:
   password: "$2a$12$TcMXNU/Xs7iF6p44Kbiu..pSjI1DRdg2jaQQURET9uoyInYNgtsnO"
   first_name: Jay
@@ -109,10 +98,10 @@ jayisthegreatest@aol.com:
           performed: ''
       prescriptions: {}
     muad'dib:
-      birthday: '2024-04-09'
+      birthday: '2024-04-08'
       type: Hamster
       breed: Dwarf Hamster
-      weight: ".12"
+      weight: '3'
       microchip: ''
       vaccines:
         FeLV:

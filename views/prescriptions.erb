@@ -1,7 +1,7 @@
 <% content_for :header_title do %>
   <h2>RX Prescriptions</h2>
 <% end %>
-
+<a href="/<%=@name%>/add_prescription">Add Prescription</a>
 <% if @prescriptions.empty? %>
   <h3>There are no active prescriptions.</h3>
 <% else %>
@@ -15,4 +15,3 @@
     <% end %>
   </ul>
 <% end %>
-

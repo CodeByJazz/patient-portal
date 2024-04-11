@@ -1,6 +1,7 @@
 <% content_for :header_title do %>
   <h2>Visit History</h2>
 <% end %>
+<a href="/<%=@name%>/add_visit">Add New Visit</a>
 <ul>
   <% sort_by_date(@visits).each do |date| %>
   <li>
@@ -8,4 +9,3 @@
   </li>
   <% end %>
 </ul>
-
