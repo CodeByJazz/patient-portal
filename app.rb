@@ -78,7 +78,7 @@ end
 
 def error_for_sign_in(username)
   if !@users.key?(username)
-    "There is no account associated with #{username}. Please create an account below."
+    "There is no account associated with the username '#{username}'. Please create an account below."
   else
     "Invalid Credentials. Please Try Again."
   end
@@ -115,6 +115,7 @@ def delete_pet(name)
   @users[session[:username]]["pets"].delete(name)
   File.open(credentials_path, 'w') { |f| YAML.dump(@users, f) }
 end
+
 
 def add_pet(name, birthday, type, breed, weight, microchip)
   create_directory(name)
@@ -193,9 +194,20 @@ def restrict_access
   redirect "/" if session[:username].nil?
 end
 
-# not_found do 
-#   redirect "/"
-# end
+def create_account(username, password, first_name, last_name, number)
+  @users[username] = {
+    "password" => password,
+    "first_name" => first_name,
+    "last_name" => last_name,
+    "phone_number" => number, 
+    "pets" => {}
+  }
+  File.open(credentials_path, 'w') { |f| YAML.dump(@users, f) }
+end
+
+not_found do 
+  redirect "/"
+end
 
 get "/" do 
   if session[:username] == "admin@ppc.com"
@@ -427,11 +439,29 @@ get "/create_account" do
 end
 
 post "/create_account" do 
+  @username = params[:username].strip
+  @password = params[:password].strip
+  @confirmed_password = params[:confirm_password].strip
+  @first_name = params[:first_name].strip
+  @last_name = params[:last_name].strip
+  @phone_number = params[:phone_number].strip
 
-  # create_account(@email, password, @first_name, @last_name, number)
-  # session[:message] = "Your account has been created! You may now log in."
-  # redirect "/"
+  if @username.empty?
+    session[:message] = "Please enter a valid username"
+    erb :sign_up
+  elsif @password.length < 8
+    session[:message] = "Please enter a valid password."
+    erb :sign_up
+  elsif @password != @confirmed_password
+    session[:message] = "Passwords must match."
+    erb :sign_up
+  elsif @first_name.empty? || @last_name.empty?
+    session[:message] = "Please enter a valid name."
+    erb :sign_up
+  else
+    create_account(@username, @password, @first_name, @last_name, @phone_number)
+
+    session[:message] = "Your account has been created! You may now log in."
+    redirect "/"
+  end
 end
-
-# def create_account(email, password, first_name, last_name, number)
-# end

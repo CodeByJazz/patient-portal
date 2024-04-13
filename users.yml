@@ -132,3 +132,79 @@ jayisthegreatest@aol.com:
           due: ''
           performed: ''
       prescriptions: {}
+cherry243:
+  password: "$2a$12$qIIDALBQkOzolfpcn2PTbOOvz1vRjeo7dAUeKzK8HKbB/P.yEqCca"
+  first_name: Alea
+  last_name: Cherry
+  phone_number: 212-345-9090
+  pets:
+    darwin:
+      birthday: '2005-10-04'
+      type: Turtle
+      breed: Eastern Box Turtle
+      weight: '12.4'
+      microchip: ''
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}
+    max:
+      birthday: '2024-04-13'
+      type: Canine
+      breed: Maine Coon
+      weight: '9'
+      microchip: '231245674'
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}
