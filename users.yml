@@ -6,6 +6,7 @@ admin@ppc.com:
     cuscus:
       prozac: 30
       apoquel: 90
+      rimadyl: 60
 jayisthegreatest@aol.com:
   password: "$2a$12$TcMXNU/Xs7iF6p44Kbiu..pSjI1DRdg2jaQQURET9uoyInYNgtsnO"
   first_name: Jay
@@ -142,7 +143,7 @@ cherry243:
       birthday: '2005-10-04'
       type: Turtle
       breed: Eastern Box Turtle
-      weight: '12.4'
+      weight: '13'
       microchip: ''
       vaccines:
         FeLV:
@@ -174,8 +175,8 @@ cherry243:
           performed: ''
       prescriptions: {}
     max:
-      birthday: '2024-04-13'
-      type: Canine
+      birthday: '2023-04-13'
+      type: Feline
       breed: Maine Coon
       weight: '9'
       microchip: '231245674'

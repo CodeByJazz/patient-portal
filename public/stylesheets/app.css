@@ -1,24 +1,158 @@
+img { 
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; /* Makes the image round */
+  margin-bottom: 15px; /* Adds spacing below the image */
+}
+
 body {
+  font-family: Arial, sans-serif;
+  background-color: #F8F8F8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #324E7B;
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+main {
   padding: 20px;
-  font-family: sans-serif;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+select,
+button {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #5068A9;
+  border-radius: 5px;
+}
+
+input[type="submit"],
+button {
+  background-color: #86A6DF;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+a {
+  color: #5068A9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #5068A9;
+}
+
+th {
+  background-color: #324E7B;
+  color: #FFFFFF;
+}
+
+.user-status {
+  margin-top: 20px;
 }
 
 .message {
+  background-color: #86A6DF;
+  color: #FFFFFF;
   padding: 10px;
-  background-color: bisque;
+  border-radius: 5px;
 }
 
-form.inline {
-  display: inline;
+.information {
+  background-color: #F8F8F8;
+  padding: 20px;
+  border: 1px solid #5068A9;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.inline-form {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px; 
+}
+
+
+.inline-form button {
+  padding: 5px;
+  margin-left: 3px; 
+}
+
+.pet-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.pet-grid {
+  padding-bottom: 80px;
+  text-align: center;
+  width: 200px; 
+  height: 250px; /* Fixed height for each grid item */
+}
+
+.pet-grid img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pet-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pet-item a {
+  display: block;
+  color: #5068A9;
+  margin-bottom: 18px;
+}
+
+.pet-item button {
+  background-color: #86A6DF;
+  color: #F8F8F8;
+  border: 1px solid #5068A9;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.pet-item button:hover {
+  background-color:#5068A9;
+}
+
+.inline-form {
+  display: inline-block;
 }
 
 .user-status {
   font-style: italic;
+  margin-top: 10px;
 }
 
-img { 
-  width: 150px; /* Adjust the width to your preference */
-  height: 150px; /* Adjust the height to your preference */
-  border-radius: 50%; /* Makes the image round */
-  margin-bottom: 20px; /* Adds spacing below the image */
-}
