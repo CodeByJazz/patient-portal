@@ -1,0 +1,211 @@
+---
+admin@ppc.com:
+  password: "$2a$12$4NPaTkJSi9RUeBf/2wdv8.NKyNOsf7GW3k.RpOrQLfXywI3HDAMVi"
+  first_name: Administrator
+  refill_requests:
+    cuscus:
+      prozac: 30
+      apoquel: 90
+      rimadyl: 60
+jayisthegreatest@aol.com:
+  password: "$2a$12$TcMXNU/Xs7iF6p44Kbiu..pSjI1DRdg2jaQQURET9uoyInYNgtsnO"
+  first_name: Jay
+  last_name: Lujan
+  phone_number: 917-093-2323
+  pets:
+    cuscus:
+      birthday: '2013-04-01'
+      type: Canine
+      breed: Akita
+      weight: '76'
+      microchip: '666'
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: 01-16-2025
+          performed: 01-16-2022
+        DA2P:
+          due: 01-16-2025
+          performed: 01-16-2022
+        Lepto:
+          due: 03-12-2025
+          performed: 03-12-2024
+        Lyme:
+          due: 03-12-2025
+          performed: 03-12-2024
+        Influenza:
+          due: 01-16-2023
+          performed: 01-16-2022
+        Bordetella:
+          due: 03-12-2025
+          performed: 03-12-2024
+        Parvovirus:
+          due: 01-16-2023
+          performed: 01-16-2022
+      prescriptions:
+        rimadyl:
+          dosage: 10mg
+          refills: 2
+          quantity: 60
+          instructions: Give 1/4 of a tablet twice a day with food.
+        prozac:
+          dosage: 5mg
+          refills: 3
+          quantity: 30
+          instructions: Give 1 pill once a day with food.
+        apoquel:
+          dosage: 16mg
+          refills: 0
+          quantity: 90
+          instructions: Give 1 pill once a day with food.
+    sammy:
+      birthday: '2020-05-04'
+      type: Bird
+      breed: Pigeon
+      weight: '4'
+      microchip: ''
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}
+    muad'dib:
+      birthday: '2024-04-08'
+      type: Hamster
+      breed: Dwarf Hamster
+      weight: '3'
+      microchip: ''
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}
+cherry243:
+  password: "$2a$12$qIIDALBQkOzolfpcn2PTbOOvz1vRjeo7dAUeKzK8HKbB/P.yEqCca"
+  first_name: Alea
+  last_name: Cherry
+  phone_number: 212-345-9090
+  pets:
+    darwin:
+      birthday: '2005-10-04'
+      type: Turtle
+      breed: Eastern Box Turtle
+      weight: '13'
+      microchip: ''
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}
+    max:
+      birthday: '2023-04-13'
+      type: Feline
+      breed: Maine Coon
+      weight: '9'
+      microchip: '231245674'
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}

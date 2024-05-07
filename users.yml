@@ -99,11 +99,46 @@ jayisthegreatest@aol.com:
           performed: ''
       prescriptions: {}
     muad'dib:
-      birthday: '2024-04-08'
+      birthday: '2024-05-07'
       type: Hamster
-      breed: Dwarf Hamster
+      breed: Syrian Hamster
       weight: '3'
       microchip: ''
+      vaccines:
+        FeLV:
+          due: ''
+          performed: ''
+        FVRCP:
+          due: ''
+          performed: ''
+        Rabies:
+          due: ''
+          performed: ''
+        DA2P:
+          due: ''
+          performed: ''
+        Lepto:
+          due: ''
+          performed: ''
+        Lyme:
+          due: ''
+          performed: ''
+        Influenza:
+          due: ''
+          performed: ''
+        Bordatella:
+          due: ''
+          performed: ''
+        Parvovirus:
+          due: ''
+          performed: ''
+      prescriptions: {}
+    bubbles:
+      birthday: '2024-04-29'
+      type: Canine
+      breed: Poodle
+      weight: '12'
+      microchip: '22298301'
       vaccines:
         FeLV:
           due: ''
