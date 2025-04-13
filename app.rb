@@ -18,7 +18,7 @@ before do
   @users = YAML.load_file(credentials_path)
 end
 
-helpers do 
+helpers do
   def sort_by_date(visits)
     visits.sort_by do |visit|
       Date.parse(visit)
